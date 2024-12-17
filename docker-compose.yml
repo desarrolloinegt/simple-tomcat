@@ -1,5 +1,5 @@
 services:
-  purchases-app:
+  tomcat:
     build:
       context: .
       dockerfile: Dockerfile
@@ -7,7 +7,7 @@ services:
         TOMCAT_VERSION: ${TOMCAT_VERSION}
     ports:
       - "${HOST_PORT}:8080"
-    container_name: tomcat
+    #container_name: tomcat
     restart: always
     volumes:
       - ./logs:/usr/local/tomcat/logs
